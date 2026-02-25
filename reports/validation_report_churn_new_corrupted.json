@@ -1,0 +1,82 @@
+{
+  "dataset_name": "churn_new_corrupted",
+  "timestamp": "2026-02-25T19:43:30.304458",
+  "num_rows": 1540,
+  "num_columns": 21,
+  "checks": {
+    "column_existence": {
+      "name": "Column Existence",
+      "status": "PASS",
+      "missing_columns": [],
+      "extra_columns": []
+    },
+    "data_types": {
+      "name": "Data Types",
+      "status": "PASS",
+      "mismatched": {}
+    },
+    "missing_values": {
+      "name": "Missing Values",
+      "status": "WARNING",
+      "total_nulls": 394,
+      "columns_with_nulls": {
+        "tenure": {
+          "null_count": 131,
+          "null_percentage": 8.51,
+          "exceeds_threshold": true
+        },
+        "MonthlyCharges": {
+          "null_count": 126,
+          "null_percentage": 8.18,
+          "exceeds_threshold": true
+        },
+        "TotalCharges": {
+          "null_count": 137,
+          "null_percentage": 8.9,
+          "exceeds_threshold": true
+        }
+      }
+    },
+    "numeric_ranges": {
+      "name": "Numeric Ranges",
+      "status": "FAIL",
+      "out_of_range_columns": {
+        "tenure": {
+          "expected_min": 0,
+          "expected_max": 120,
+          "actual_min": -19.0,
+          "actual_max": 72.0,
+          "below_min_count": 31,
+          "above_max_count": 0
+        }
+      }
+    },
+    "duplicates": {
+      "name": "Duplicate Rows",
+      "status": "WARNING",
+      "duplicate_count": 40,
+      "duplicate_percentage": 2.6
+    },
+    "categories": {
+      "name": "Category Values",
+      "status": "FAIL",
+      "unexpected_categories": {
+        "Contract": {
+          "unexpected_values": [
+            "Weekly"
+          ],
+          "count": 20
+        }
+      }
+    }
+  },
+  "issues": [
+    "Columns with out-of-range values: ['tenure']",
+    "Unexpected categories in: ['Contract']"
+  ],
+  "warnings": [
+    "Columns with >5% missing values: ['tenure', 'MonthlyCharges', 'TotalCharges']",
+    "Found 40 duplicate rows"
+  ],
+  "overall_status": "FAIL"
+}

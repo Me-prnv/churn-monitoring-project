@@ -1,0 +1,301 @@
+{
+  "dataset_name": "churn_new_corrupted",
+  "timestamp": "2026-02-25T19:43:30.416049",
+  "reference_rows": 5000,
+  "current_rows": 1540,
+  "total_features_checked": 19,
+  "drifted_features_count": 5,
+  "drifted_features": [
+    "tenure",
+    "gender",
+    "InternetService",
+    "Contract",
+    "PaymentMethod"
+  ],
+  "drift_detected": true,
+  "drift_severity": "MODERATE",
+  "feature_results": {
+    "SeniorCitizen": {
+      "type": "numeric",
+      "ks_statistic": 0.0099,
+      "ks_pvalue": 0.999773,
+      "psi": 0.00073,
+      "drift_detected": false,
+      "reference_mean": 0.1544,
+      "current_mean": 0.1643,
+      "mean_shift": 0.0099,
+      "reference_std": 0.3614,
+      "current_std": 0.3707
+    },
+    "tenure": {
+      "type": "numeric",
+      "ks_statistic": 0.0293,
+      "ks_pvalue": 0.293369,
+      "psi": 0.399023,
+      "drift_detected": true,
+      "reference_mean": 35.3958,
+      "current_mean": 34.8872,
+      "mean_shift": -0.5086,
+      "reference_std": 21.1078,
+      "current_std": 22.3036
+    },
+    "MonthlyCharges": {
+      "type": "numeric",
+      "ks_statistic": 0.0258,
+      "ks_pvalue": 0.447558,
+      "psi": 0.002829,
+      "drift_detected": false,
+      "reference_mean": 68.1665,
+      "current_mean": 68.9375,
+      "mean_shift": 0.771,
+      "reference_std": 28.7044,
+      "current_std": 28.849
+    },
+    "TotalCharges": {
+      "type": "numeric",
+      "ks_statistic": 0.0327,
+      "ks_pvalue": 0.186459,
+      "psi": 0.013027,
+      "drift_detected": false,
+      "reference_mean": 2407.5213,
+      "current_mean": 2492.6551,
+      "mean_shift": 85.1338,
+      "reference_std": 1856.8804,
+      "current_std": 1926.0004
+    },
+    "gender": {
+      "type": "categorical",
+      "chi2_statistic": 4.4158,
+      "chi2_pvalue": 0.035608,
+      "drift_detected": "True",
+      "reference_distribution": {
+        "Female": 0.4992,
+        "Male": 0.5008
+      },
+      "current_distribution": {
+        "Female": 0.526,
+        "Male": 0.474
+      }
+    },
+    "Partner": {
+      "type": "categorical",
+      "chi2_statistic": 1.6722,
+      "chi2_pvalue": 0.195965,
+      "drift_detected": "False",
+      "reference_distribution": {
+        "No": 0.5134,
+        "Yes": 0.4866
+      },
+      "current_distribution": {
+        "No": 0.5299,
+        "Yes": 0.4701
+      }
+    },
+    "Dependents": {
+      "type": "categorical",
+      "chi2_statistic": 3.6351,
+      "chi2_pvalue": 0.056572,
+      "drift_detected": "False",
+      "reference_distribution": {
+        "No": 0.7018,
+        "Yes": 0.2982
+      },
+      "current_distribution": {
+        "No": 0.724,
+        "Yes": 0.276
+      }
+    },
+    "PhoneService": {
+      "type": "categorical",
+      "chi2_statistic": 0.0161,
+      "chi2_pvalue": 0.898934,
+      "drift_detected": "False",
+      "reference_distribution": {
+        "No": 0.1088,
+        "Yes": 0.8912
+      },
+      "current_distribution": {
+        "No": 0.1078,
+        "Yes": 0.8922
+      }
+    },
+    "MultipleLines": {
+      "type": "categorical",
+      "chi2_statistic": 1.0738,
+      "chi2_pvalue": 0.584559,
+      "drift_detected": "False",
+      "reference_distribution": {
+        "No": 0.5262,
+        "No phone service": 0.1088,
+        "Yes": 0.365
+      },
+      "current_distribution": {
+        "No": 0.539,
+        "No phone service": 0.1078,
+        "Yes": 0.3532
+      }
+    },
+    "InternetService": {
+      "type": "categorical",
+      "chi2_statistic": 6.0976,
+      "chi2_pvalue": 0.047416,
+      "drift_detected": "True",
+      "reference_distribution": {
+        "DSL": 0.3318,
+        "Fiber optic": 0.4482,
+        "No": 0.22
+      },
+      "current_distribution": {
+        "DSL": 0.3416,
+        "Fiber optic": 0.4188,
+        "No": 0.2396
+      }
+    },
+    "OnlineSecurity": {
+      "type": "categorical",
+      "chi2_statistic": 3.5726,
+      "chi2_pvalue": 0.167576,
+      "drift_detected": "False",
+      "reference_distribution": {
+        "No": 0.5618,
+        "No internet service": 0.22,
+        "Yes": 0.2182
+      },
+      "current_distribution": {
+        "No": 0.5442,
+        "No internet service": 0.2396,
+        "Yes": 0.2162
+      }
+    },
+    "OnlineBackup": {
+      "type": "categorical",
+      "chi2_statistic": 4.1763,
+      "chi2_pvalue": 0.123917,
+      "drift_detected": "False",
+      "reference_distribution": {
+        "No": 0.5162,
+        "No internet service": 0.22,
+        "Yes": 0.2638
+      },
+      "current_distribution": {
+        "No": 0.4942,
+        "No internet service": 0.2396,
+        "Yes": 0.2662
+      }
+    },
+    "DeviceProtection": {
+      "type": "categorical",
+      "chi2_statistic": 4.0094,
+      "chi2_pvalue": 0.134699,
+      "drift_detected": "False",
+      "reference_distribution": {
+        "No": 0.5174,
+        "No internet service": 0.22,
+        "Yes": 0.2626
+      },
+      "current_distribution": {
+        "No": 0.5123,
+        "No internet service": 0.2396,
+        "Yes": 0.2481
+      }
+    },
+    "TechSupport": {
+      "type": "categorical",
+      "chi2_statistic": 3.8093,
+      "chi2_pvalue": 0.148877,
+      "drift_detected": "False",
+      "reference_distribution": {
+        "No": 0.5538,
+        "No internet service": 0.22,
+        "Yes": 0.2262
+      },
+      "current_distribution": {
+        "No": 0.5338,
+        "No internet service": 0.2396,
+        "Yes": 0.2266
+      }
+    },
+    "StreamingTV": {
+      "type": "categorical",
+      "chi2_statistic": 3.7051,
+      "chi2_pvalue": 0.156837,
+      "drift_detected": "False",
+      "reference_distribution": {
+        "No": 0.4826,
+        "No internet service": 0.22,
+        "Yes": 0.2974
+      },
+      "current_distribution": {
+        "No": 0.476,
+        "No internet service": 0.2396,
+        "Yes": 0.2844
+      }
+    },
+    "StreamingMovies": {
+      "type": "categorical",
+      "chi2_statistic": 4.5311,
+      "chi2_pvalue": 0.103772,
+      "drift_detected": "False",
+      "reference_distribution": {
+        "No": 0.4732,
+        "No internet service": 0.22,
+        "Yes": 0.3068
+      },
+      "current_distribution": {
+        "No": 0.4727,
+        "No internet service": 0.2396,
+        "Yes": 0.2877
+      }
+    },
+    "Contract": {
+      "type": "categorical",
+      "chi2_statistic": Infinity,
+      "chi2_pvalue": 0.0,
+      "drift_detected": "True",
+      "reference_distribution": {
+        "Month-to-month": 0.5432,
+        "One year": 0.2142,
+        "Two year": 0.2426,
+        "Weekly": 0.0
+      },
+      "current_distribution": {
+        "Month-to-month": 0.5416,
+        "One year": 0.224,
+        "Two year": 0.2214,
+        "Weekly": 0.013
+      }
+    },
+    "PaperlessBilling": {
+      "type": "categorical",
+      "chi2_statistic": 0.5599,
+      "chi2_pvalue": 0.454298,
+      "drift_detected": "False",
+      "reference_distribution": {
+        "No": 0.4198,
+        "Yes": 0.5802
+      },
+      "current_distribution": {
+        "No": 0.4104,
+        "Yes": 0.5896
+      }
+    },
+    "PaymentMethod": {
+      "type": "categorical",
+      "chi2_statistic": 8.7863,
+      "chi2_pvalue": 0.032271,
+      "drift_detected": "True",
+      "reference_distribution": {
+        "Bank transfer (automatic)": 0.212,
+        "Credit card (automatic)": 0.2042,
+        "Electronic check": 0.349,
+        "Mailed check": 0.2348
+      },
+      "current_distribution": {
+        "Bank transfer (automatic)": 0.2403,
+        "Credit card (automatic)": 0.1851,
+        "Electronic check": 0.3442,
+        "Mailed check": 0.2305
+      }
+    }
+  }
+}

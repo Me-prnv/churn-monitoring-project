@@ -1,0 +1,44 @@
+{
+  "dataset_name": "churn_new_drifted",
+  "timestamp": "2026-02-25T18:55:22.059527",
+  "num_rows": 1500,
+  "num_columns": 21,
+  "checks": {
+    "column_existence": {
+      "name": "Column Existence",
+      "status": "PASS",
+      "missing_columns": [],
+      "extra_columns": []
+    },
+    "data_types": {
+      "name": "Data Types",
+      "status": "PASS",
+      "mismatched": {}
+    },
+    "missing_values": {
+      "name": "Missing Values",
+      "status": "PASS",
+      "total_nulls": 0,
+      "columns_with_nulls": {}
+    },
+    "numeric_ranges": {
+      "name": "Numeric Ranges",
+      "status": "PASS",
+      "out_of_range_columns": {}
+    },
+    "duplicates": {
+      "name": "Duplicate Rows",
+      "status": "PASS",
+      "duplicate_count": 0,
+      "duplicate_percentage": 0.0
+    },
+    "categories": {
+      "name": "Category Values",
+      "status": "PASS",
+      "unexpected_categories": {}
+    }
+  },
+  "issues": [],
+  "warnings": [],
+  "overall_status": "PASS"
+}
